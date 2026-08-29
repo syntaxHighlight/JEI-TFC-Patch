@@ -1,0 +1,39 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+
+[[mods]]
+modId="tfc_food_sync_fix"
+version="${file.jarVersion}"
+displayName="TFC Food Sync Fix"
+authors="TFC Food Sync Fix Contributors"
+description='''
+Fixes tfc:not_rotten (and other FoodCapability-dependent) ingredients missing from JEI's
+recipe usage index when the client connects to a dedicated server, by rebuilding the TFC
+food definition cache and invalidating Forge ingredients right after TFC's food data sync
+from a physical server completes.
+
+Client-side only. Does not touch JEI's API, does not trigger datapack / resource reloads,
+and does not alter recipe matching behavior.
+'''
+
+[[dependencies.tfc_food_sync_fix]]
+    modId="forge"
+    mandatory=true
+    versionRange="[47,)"
+    ordering="NONE"
+    side="CLIENT"
+
+[[dependencies.tfc_food_sync_fix]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1,1.21)"
+    ordering="NONE"
+    side="CLIENT"
+
+[[dependencies.tfc_food_sync_fix]]
+    modId="tfc"
+    mandatory=true
+    versionRange="[3.2.24,)"
+    ordering="AFTER"
+    side="CLIENT"

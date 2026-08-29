@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "tfcfoodsyncfix.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "tfc_food_sync_fix.refmap.json",
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "client": [
+    "DataManagerMixin"
+  ]
+}

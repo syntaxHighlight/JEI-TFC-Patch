@@ -1,0 +1,28 @@
+# Build outputs
+.gradle/
+build/
+out/
+classes/
+
+# Runtime / dev environment
+run/
+eclipse/
+*.launch
+.metadata
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.settings/
+.classpath
+.project
+bin/
+
+# OS
+.DS_Store
+
+# Internal docs (not for publication)
+goal.md
