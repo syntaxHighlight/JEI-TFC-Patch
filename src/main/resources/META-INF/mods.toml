@@ -13,6 +13,11 @@ recipe usage index when the client connects to a dedicated server, by rebuilding
 food definition cache and invalidating Forge ingredients right after TFC's food data sync
 from a physical server completes.
 
+Also re-creates the local player's inventory and curios item stacks after the sync: those
+instances were created during login (before TFC's data sync arrived) while the definition
+caches were still empty, so their item capabilities (food, heat, ...) never attached - which
+broke not_rotten ingredient matching (sandwiches, salads, soups) for items obtained at login.
+
 Client-side only. Does not touch JEI's API, does not trigger datapack / resource reloads,
 and does not alter recipe matching behavior.
 '''

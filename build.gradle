@@ -60,6 +60,9 @@ dependencies {
     // Compile-time dependency only. This patch never references JEI, so it is
     // safe to run without JEI installed.
     implementation fg.deobf("maven.modrinth:terrafirmacraft:${tfc_version}")
+
+    // Optional soft dependency: curios slots are refreshed after the cache rebuild.
+    compileOnly fg.deobf("maven.modrinth:curios:5.14.1+1.20.1")
 }
 
 tasks.named('jar', Jar).configure {
